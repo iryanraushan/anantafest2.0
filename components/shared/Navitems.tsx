@@ -12,7 +12,12 @@ const Navitems = () => {
       {headerLinks.map((links) => {
         const isActive = pathName === links.route;
         return (
-          <li key={links.route}>
+          <li
+            key={links.route}
+            className={`${
+              isActive && "text-primary-500"
+            } flex-center p-medium-16 whitespace-nowrap`}
+          >
             <Link href={links.route}>{links.label}</Link>
           </li>
         );
